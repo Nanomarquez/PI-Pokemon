@@ -1,0 +1,84 @@
+.hero{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content{
+  text-align: center;
+  opacity: 0;
+  transition: 1s;
+}
+
+.content h1{
+  cursor: default;
+  transform: translateY(-50px);
+  font-size: 180px;
+  color: transparent;
+  font-weight: 900;
+  -webkit-text-stroke: 1px rgb(255,255,255);
+  transition-duration: 1s;
+  background-image: url(../../assets/background.jpeg);
+  background-size: cover;
+  background-position-y: center;
+  background-clip: text;
+  opacity: 0.6;
+}
+
+.content h1:hover{
+  opacity: 1;
+}
+
+.btn {
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 45px;
+  margin: 0 auto 2em;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 300px;
+  border: 0 solid;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+  outline: 1px solid;
+  outline-color: rgba(255, 255, 255, 0.5);
+  outline-offset: 0px;
+  text-shadow: none;
+  transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+  border-radius: 5px;
+}
+
+
+.btn:hover {
+  border: 1px solid;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.2);
+  outline-color: rgba(255, 255, 255, 0);
+  outline-offset: 15px;
+  text-shadow: 1px 1px 2px #427388;
+}
+
+@media only screen and (max-width: 900px) {
+  .content h1{
+    font-size: 80px ;
+    -webkit-text-stroke: 0.5px rgb(255,255,255);
+  }
+  .btn {
+    font-size:10px;
+    width: 150px;
+  }
+}
+
+.parrafe{
+  display: flex;
+  position: absolute;
+  top: 20px;
+  left: 100px;
+  color: white;
+  font-weight: bold;
+}

@@ -1,0 +1,52 @@
+.nav {
+	height:8vh;
+	max-height: 3rem;
+	width: 100vw;
+	background: #000;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 50;
+	position: fixed;
+	transform: translateY(-55px);
+	transition: 1s;
+	outline: none;
+}
+
+
+.search {
+	width: 30%;
+}
+
+.pHP {
+	/* font-size: 1.5rem; */
+	font-size: 2vw;
+	font-size-adjust: 1.5rem;
+	font-weight: 500;
+	color: #ffffff;
+	margin-left: 2rem;
+	transition: 0.3s;
+	outline: none;
+}
+.pHP:hover {
+	color: rgb(255,100,0);
+	transform: translateY(-1px);
+}
+
+.pCP {
+	font-size: 2vw;
+	font-size-adjust: 1.5rem;
+	font-weight: 500;
+	color: #ffffff;
+	margin-right: 2rem;
+	transition: 0.3s;
+}
+
+.pCP:hover {
+	color: rgb(255,100,0);
+	transform: translateY(-1px);
+}
+
+.link {
+	text-decoration: none;
+}

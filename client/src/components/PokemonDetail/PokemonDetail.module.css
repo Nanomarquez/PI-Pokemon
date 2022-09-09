@@ -1,0 +1,543 @@
+.divContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../../assets/background.jpg");
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
+
+.divCardDetail {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  height: 65%;
+  margin-top: 5rem;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 16px;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.253);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(10.2px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.divCardImageName {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50rem;
+  height: 100%;
+}
+
+.name {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #000;
+  margin-left: 10px;
+  -webkit-text-stroke: 0.5px rgb(255,255,255);
+}
+
+.img {
+  height: 50vh;
+  max-width: 600px;
+  margin-top: -6rem;
+  margin-left: 3rem;
+  filter: drop-shadow(-2px 4px 15px rgb(0, 0, 0));
+  transition: 0.3s;-webkit-animation: bounce-down 1.6s linear infinite;
+  animation: bounce-down 1.6s linear infinite;
+}
+
+
+@-webkit-keyframes bounce-down {
+  25% {
+       -webkit-transform: translateY(-3px);
+  }
+  50%, 100% {
+       -webkit-transform: translateY(0);
+  }
+  75% {
+       -webkit-transform: translateY(3px);
+  }
+}
+
+@keyframes bounce-down {
+   25% {
+        transform: translateY(-3px);
+   }
+   50%, 100% {
+        transform: translateY(0);
+   }
+   75% {
+        transform: translateY(3px);
+   }
+  }
+
+
+.divTypeContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.divType {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 8rem;
+  height: 3rem;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.typeName {
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #fff;
+}
+
+.rightContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin:2rem;
+  height: 90%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 16px;
+}
+
+.divStatsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.stat1{
+  display: flex;
+  justify-content: space-around;
+  
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: #fff;
+  margin-top: 0px;
+  width: 100%;
+}
+
+.stat2{
+  display: flex;
+  justify-content: space-around;
+  
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: #fff;
+  margin-top: 0px;
+  width: 100%;
+}
+
+.stat3{
+  display: flex;
+  justify-content: space-around;
+  
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: #fff;
+  margin-top: 0px;
+  width: 100%;
+}
+  .hp {
+  
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: #fff;
+}
+
+.attack {
+  
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: #fff;
+}
+
+.defense {
+  
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: #fff;
+}
+
+.speed {
+  
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: #fff;
+}
+
+.height {
+  
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: #fff;
+}
+
+.weight {
+  
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: #fff;
+}
+
+.buttonToHome {
+
+  font-size: 1rem;
+  font-weight: 400;
+  color: rgb(0, 0, 0);
+  height: 2.3rem;
+  width: 8rem;
+  background-color: rgb(247, 208, 44);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+}
+
+.buttonDel {
+
+  font-size: 1rem;
+  font-weight: 400;
+  color: rgb(0, 0, 0);
+  height: 2.3rem;
+  width: 9rem;
+  background-color: rgb(255, 68, 68);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Estilos para cada tipo */
+.Normal {
+  width: 10rem;
+  height: 2.3rem;
+  text-align: center;
+  
+  color: rgb(255, 255, 255);
+  font-weight: 300;
+  font-size: 1.3rem;
+  background: rgba(168, 167, 122, 0.900);
+  border-radius: 20px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.8px);
+  -webkit-backdrop-filter: blur(8.8px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.Fighting {
+  width: 10rem;
+  height: 2.3rem;
+  text-align: center;
+  
+  color: rgb(255, 255, 255);
+  font-weight: 300;
+  font-size: 1.3rem;
+  background: rgba(194, 46, 40, 0.900);
+  border-radius: 20px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.8px);
+  -webkit-backdrop-filter: blur(8.8px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.Flying {
+  width: 7rem;
+  height: 2.3rem;
+  text-align: center;
+  
+  color: rgb(255, 255, 255);
+  font-weight: 300;
+  font-size: 1.3rem;
+  background: rgba(169, 143, 243, 0.900);
+  border-radius: 20px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.8px);
+  -webkit-backdrop-filter: blur(8.8px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.Poison {
+  width: 7rem;
+  height: 2.3rem;
+  text-align: center;
+  
+  color: rgb(255, 255, 255);
+  font-weight: 300;
+  font-size: 1.3rem;
+  background: rgba(163, 62, 161, 0.900);
+  border-radius: 20px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.8px);
+  -webkit-backdrop-filter: blur(8.8px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.Ground {
+  width: 7rem;
+  height: 2.3rem;
+  text-align: center;
+  
+  color: rgb(255, 255, 255);
+  font-weight: 300;
+  font-size: 1.3rem;
+  background: rgba(226, 191, 101, 0.900);
+  border-radius: 20px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.8px);
+  -webkit-backdrop-filter: blur(8.8px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.Rock {
+  width: 7rem;
+  height: 2.3rem;
+  text-align: center;
+  
+  color: rgb(255, 255, 255);
+  font-weight: 300;
+  font-size: 1.3rem;
+  background: rgba(182, 161, 54, 0.900);
+  border-radius: 20px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.8px);
+  -webkit-backdrop-filter: blur(8.8px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.Bug {
+  width: 7rem;
+  height: 2.3rem;
+  text-align: center;
+  
+  color: rgb(255, 255, 255);
+  font-weight: 300;
+  font-size: 1.3rem;
+  background: rgba(166, 185, 26, 0.900);
+  border-radius: 20px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.8px);
+  -webkit-backdrop-filter: blur(8.8px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.Ghost {
+  width: 7rem;
+  height: 2.3rem;
+  text-align: center;
+  
+  color: rgb(255, 255, 255);
+  font-weight: 300;
+  font-size: 1.3rem;
+  background: rgba(115, 87, 151, 0.900);
+  border-radius: 20px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.8px);
+  -webkit-backdrop-filter: blur(8.8px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.Steel {
+  width: 7rem;
+  height: 2.3rem;
+  text-align: center;
+  
+  color: rgb(255, 255, 255);
+  font-weight: 300;
+  font-size: 1.3rem;
+  background: rgba(183, 183, 206, 0.900);
+  border-radius: 20px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.8px);
+  -webkit-backdrop-filter: blur(8.8px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.Fire {
+  width: 7rem;
+  height: 2.3rem;
+  text-align: center;
+  
+  color: rgb(255, 255, 255);
+  font-weight: 300;
+  font-size: 1.3rem;
+  background: rgba(238, 129, 48, 0.900);
+  border-radius: 20px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.8px);
+  -webkit-backdrop-filter: blur(8.8px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.Water {
+  width: 7rem;
+  height: 2.3rem;
+  text-align: center;
+  
+  color: rgb(255, 255, 255);
+  font-weight: 300;
+  font-size: 1.3rem;
+  background: rgba(99, 144, 240, 0.900);
+  border-radius: 20px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.8px);
+  -webkit-backdrop-filter: blur(8.8px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.Grass {
+  width: 7rem;
+  height: 2.3rem;
+  text-align: center;
+  
+  color: rgb(255, 255, 255);
+  font-weight: 300;
+  font-size: 1.3rem;
+  background: rgba(122, 199, 76, 0.900);
+  border-radius: 20px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.8px);
+  -webkit-backdrop-filter: blur(8.8px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.Electric {
+ width: 7rem;
+  height: 2.3rem;
+  text-align: center;
+  
+  color: rgb(255, 255, 255);
+  font-weight: 300;
+  font-size: 1.3rem;
+  background: rgba(247, 208, 44, 0.900);
+  border-radius: 20px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.8px);
+  -webkit-backdrop-filter: blur(8.8px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.Psychic {
+  width: 7rem;
+  height: 2.3rem;
+  text-align: center;
+  
+  color: rgb(255, 255, 255);
+  font-weight: 300;
+  font-size: 1.3rem;
+  background: rgba(249, 85, 135, 0.900);
+  border-radius: 20px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.8px);
+  -webkit-backdrop-filter: blur(8.8px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.Ice {
+  width: 7rem;
+  height: 2.3rem;
+  text-align: center;
+  
+  color: rgb(255, 255, 255);
+  font-weight: 300;
+  font-size: 1.3rem;
+  background: rgba(150, 217, 214, 0.900);
+  border-radius: 20px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.8px);
+  -webkit-backdrop-filter: blur(8.8px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.Dragon {
+  width: 7rem;
+  height: 2.3rem;
+  text-align: center;
+  
+  color: rgb(255, 255, 255);
+  font-weight: 300;
+  font-size: 1.3rem;
+  background: rgba(111, 53, 252, 0.900);
+  border-radius: 20px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.8px);
+  -webkit-backdrop-filter: blur(8.8px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.Dark {
+  width: 7rem;
+  height: 2.3rem;
+  text-align: center;
+  
+  color: rgb(255, 255, 255);
+  font-weight: 300;
+  font-size: 1.3rem;
+  background: rgba(112, 87, 70, 0.900);
+  border-radius: 20px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.8px);
+  -webkit-backdrop-filter: blur(8.8px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.Fairy {
+  width: 7rem;
+  height: 2.3rem;
+  text-align: center;
+  
+  color: rgb(255, 255, 255);
+  font-weight: 300;
+  font-size: 1.3rem;
+  background: rgba(255, 204, 204, 0.900);
+  border-radius: 20px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.8px);
+  -webkit-backdrop-filter: blur(8.8px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.Shadow {
+  width: 7rem;
+  height: 2.3rem;
+  text-align: center;
+  
+  color: rgb(255, 255, 255);
+  font-weight: 300;
+  font-size: 1.3rem;
+  background: rgba(0, 0, 0, 0.900);
+  border-radius: 20px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.8px);
+  -webkit-backdrop-filter: blur(8.8px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}

@@ -10,14 +10,14 @@ function LandingPage() {
   } 
 
   setTimeout(function(){
-    document.getElementById('afterIntro').style.opacity=1
+    document.getElementById('afterIntro').style.opacity=1;
   },5500)
-
+  
   return (
     <div className={style.hero}>
       <div onChange={handleClickVideo}>
       <ToggleSwitch label=' '/>
-      <p className={style.parrafe}>Press YES for a better experience</p>
+      <p id='parrafo' className={style.parrafe}>Press YES for a better experience</p>
       </div>
       <video id='video' autoPlay muted loop src="/Videos/pokemon.mp4" style={{position:'absolute',width:'100%',left:'50%',top:'50%',height:'100%',objectFit:'cover',transform:'translate(-50%, -50%)',zIndex:'-1'}}>
       </video>

@@ -92,7 +92,6 @@ export const getPokemonDetails = (payload) => {
     return function (dispatch) {
         axios.get(`/pokemons/${payload}`)
             .then(response => {
-                // console.log(response.data, 'SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS');
                 dispatch({
                     type: 'GET_POKEMON_DETAILS',
                     payload: response.data,

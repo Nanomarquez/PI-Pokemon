@@ -226,7 +226,7 @@ export default function PokemonCreate() {
                     name="defense"
                     onChange={(e) => handleChange(e)}
                   />
-                  {errors.defense && <p className="errors">{errors.defense}</p>}
+                  {errors.defense && <p className={style.errors}>{errors.defense}</p>}
                 </div>
                 <br />
                 <div>

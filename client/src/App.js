@@ -7,7 +7,7 @@ import PokemonDetail from './components/PokemonDetail/PokemonDetailById';
 import PokemonDetailByName from './components/PokemonDetail/PokemonDetailByName';
 import PokemonCreate from './components/PokemonCreate/PokemonCreate';
 import NotFound from './components/NotFound'
-
+//Comentanrio
 function App() {
   return (
     <>

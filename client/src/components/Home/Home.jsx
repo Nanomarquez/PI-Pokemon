@@ -14,7 +14,7 @@ function Home() {
   const msg = useSelector((state) => state.msg);
   const [currentPage, setCurrentPage] = useState(1);
   // eslint-disable-next-line
-  const [pokemonsPerPage, setPokemonsPerPage] = useState(12);
+  const pokemonsPerPage = 12;
   const lastPokeOfThePage = currentPage * pokemonsPerPage; 
   const firstPokeOfThePage = lastPokeOfThePage - pokemonsPerPage; 
   const currentPokemons = allPokemons.slice(firstPokeOfThePage, lastPokeOfThePage);

@@ -4,7 +4,7 @@ import { getPokemonByName, clearPokemonDetails, deletePokemon } from '../../redu
 import Loading from '../Loading/Loading';
 import PokeNotFound from '../NotFound/PokeNotFound';
 import "./style.css"
-import { useNavigate } from "react-router-dom";
+import { useNavigate,Link } from "react-router-dom";
 
 export default function PokemonDetailByName () {
   const navigate = useNavigate();
@@ -16,24 +16,24 @@ export default function PokemonDetailByName () {
   },[name,setName])
   const dispatch = useDispatch()
   const pokemonDetail = useSelector(state =>                      state.detailPokemon)
-  console.log(pokemonDetail);
   useEffect(() => {
     dispatch(clearPokemonDetails())
     dispatch(getPokemonByName(name))
+    var value = "0px";
+    document.getElementById('navbar').style.transform=`translate(0,${value})`;
     console.log(name)
   }, [name, dispatch])
   
   const handleDelete = () => {
     dispatch(deletePokemon(pokemonDetail.id))
-    alert("Pokemon deleted")
     navigate('/home')
   }
-
-  if (pokemonDetail === 'Pokemon not found') return <PokeNotFound />
-  if (Object.keys(pokemonDetail).length === 0) return <Loading />;
+  if (pokemonDetail === 'Pokemon not found') return <PokeNotFound />;
+  if (pokemonDetail.name === undefined) return <Loading />;
   else {
     return(
         <div className='hero'>
+                                  <Link className='link-to-back' to='/home' style={{weight:"100px",padding:"10px",borderRadius:"10px",textDecoration:"none",left:"20px",bottom:"20px",position:"absolute"}}>{"< "}Back</Link>
           <div className='card'>
             <div className='circle'></div>
             <div className='content'>

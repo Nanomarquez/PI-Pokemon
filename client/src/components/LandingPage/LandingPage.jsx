@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import style from "./LandingPage.module.css";
 import {Link} from 'react-router-dom';
 import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
@@ -13,6 +13,11 @@ function LandingPage() {
     document.getElementById('afterIntro').style.opacity=1;
   },5500)
   
+  useEffect(() => {
+    var value = "-50px";
+    document.getElementById('navbar').style.transform=`translate(0,${value})`;
+  },[])
+
   return (
     <div className={style.hero}>
       <div onChange={handleClickVideo}>

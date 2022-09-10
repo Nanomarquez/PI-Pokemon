@@ -2,10 +2,8 @@ import React, { useEffect,useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getPokemonDetails, clearPokemonDetails, getPokemons, deletePokemon } from '../../redux/actions';
 import Loading from '../Loading/Loading';
-//import { Link } from 'react-router-dom';
 import PokeNotFound from '../NotFound/PokeNotFound';
-//import style from './PokemonDetail.module.css';
-import { useNavigate } from "react-router-dom";
+import { useNavigate ,Link } from "react-router-dom";
 import "./style.css"
 export default function PokemonDetail () {
   const [id,setId] = useState("")
@@ -13,7 +11,6 @@ export default function PokemonDetail () {
     const url = window.location.href.split("/")
     const id=url[url.length-1]
     setId(id)
-    console.log(id)
   },[setId])
   const navigate = useNavigate();
   const dispatch = useDispatch()
@@ -23,25 +20,27 @@ export default function PokemonDetail () {
   useEffect(() => {
     dispatch(clearPokemonDetails())
     dispatch(getPokemonDetails(idPokemon))
+    var value = "0px";
+    document.getElementById('navbar').style.transform=`translate(0,${value})`;
   }, [idPokemon, dispatch])
-
+  console.log("detalle: "+pokemonDetail.name)
   useEffect(() => {
     pokemons.length === 0 && dispatch(getPokemons())
   }, [dispatch,pokemons.length])
 
   const handleDelete = () => {
     dispatch(deletePokemon(idPokemon))
-    alert("Pokemon deleted")
     navigate('/home')
   }
     
   // console.log(pokemonDetail.name);
 
   if (pokemonDetail === 'Pokemon not found') return <PokeNotFound />
-  if (Object.keys(pokemonDetail).length === 0) return <Loading />;
+  if (pokemonDetail.name === undefined) return <Loading />;
   else {
     return(
         <div className='hero'>
+                        <Link className='link-to-back' to='/home' style={{weight:"100px",padding:"10px",borderRadius:"10px",textDecoration:"none",left:"20px",bottom:"20px",position:"absolute"}}>{"< "}Back</Link>
           <div className='card'>
             <div className='circle'></div>
             <div className='content'>

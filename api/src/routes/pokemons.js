@@ -99,10 +99,10 @@ router.get('/', async (req, res, next) => {
       }
       
       
-      if (getAPIDone && pokeAPIList.length > 39) {
+      if (getAPIDone && pokeAPIList.length > 99) {
           return res.send(pokeAPIList.concat(pokeDBList));
       } else {
-          const pokeAPI = await axios.get(`${URL_POKE}/?offset=0&limit=40`); 
+          const pokeAPI = await axios.get(`${URL_POKE}/?offset=0&limit=100`); 
           for (let i = 0; i < pokeAPI.data.results.length; i++) {
               const pokemonAPI = await axios.get(pokeAPI.data.results[i].url)
               pokeAPIList.push({ //Convertir a un array de objetos desde API
@@ -126,11 +126,14 @@ router.get('/', async (req, res, next) => {
 
 router.get('/:id', async (req, res, next) => { 
   const { id } = req.params;
-  if (id.length > 35) { // ID de base de datos
+  console.log(id.length)
+  if (id.length > 4) { // ID de base de datos
       try {
           const pokeDB = await Pokemon.findOne({ where: { id }, include: Type }); // Búsqueda en DB
+          console.log(pokeDB)
           if (pokeDB) {
               const pokemon = pokeDB.dataValues;
+              console.log(pokeDB)
               const pokemonFound = {
                   id: pokemon.id,
                   name: capitalize(pokemon.name),
@@ -225,7 +228,7 @@ router.post('/', async (req, res, next) => {
 router.delete('/delete/:id', async (req, res, next) => {
   const { id } = req.params;
   // console.log(id);
-  if (id.length < 35) res.json('ID must be a pokemon from the database');
+  if (id.length < 99) res.json('ID must be a pokemon from the database');
   try {
       const pokemon = await Pokemon.findOne({ where: { id } });
       // console.log(pokemon);

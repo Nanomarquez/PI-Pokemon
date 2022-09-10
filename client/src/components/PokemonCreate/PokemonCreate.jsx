@@ -107,7 +107,6 @@ export default function PokemonCreate() {
       const handleSubmit = (e) => {
         e.preventDefault();
         dispatch(createPokemon(input));
-        alert("Your pokemon has been successfully created");
         setInput({
           name: "",
           hp: "",

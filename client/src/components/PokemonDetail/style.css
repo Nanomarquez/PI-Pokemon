@@ -23,7 +23,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 80%;
 }
 
 .card .circle::before{
@@ -100,13 +100,14 @@
 .card .content .types{
   padding: 10px 20px;
   border-radius: 10px;
-  background: #fff7;
+  background: #ffd;
   font-size: large;
   font-weight: 600;
   color: #111;
   display: inline-block;
   text-decoration: none;
   transform: translate(70px,20px);
+  z-index: 5000000000;
 }
 
 @media (max-width:991px){
@@ -115,6 +116,10 @@
     max-width: 350px;
     align-items: flex-start;
     margin:10px;
+    bottom: 0;
+  }
+  .card .content .types{
+    width: 200px;
   }
   .card:hover{
     height: 600px;
@@ -125,8 +130,7 @@
     padding: 30px;
   }
   .card img{
-    top: 70%;
-    left: 50%;
+    left: 10%;
     height: 320px;
   }
 }
@@ -234,6 +238,7 @@
 }
 
 .types button{
+  height: 50px;
   font-weight: 400;
   color: rgb(0, 0, 0);
   padding: 5px;
@@ -256,4 +261,14 @@
   line-height: 1em;
   -webkit-text-stroke: #111 1px ;
   transform: translate(-100px,350px);
+}
+
+.link-to-back{
+  background-color: #fff;
+  transition: 0.5s;
+}
+
+.link-to-back:hover{
+  color: #fff;
+  background-color: #000;
 }

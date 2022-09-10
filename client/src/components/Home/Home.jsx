@@ -55,7 +55,7 @@ function Home() {
           <div className={`${style.filters}`}>
               <div className={`${style.divFilterSource}`}>
                   <select className={`${style.selectFilterSource}`} defaultValue={"default"} onChange={(e) => handleFilterByOrigin(e)}>
-                      <option value={"default"} hidden>Origin</option>
+                      <option  value={"default"} hidden>Origin</option>
                       <option value='All'>All</option>
                       <option value='PokeAPI'>PokeAPI</option>
                       <option value='Created'>Created</option>

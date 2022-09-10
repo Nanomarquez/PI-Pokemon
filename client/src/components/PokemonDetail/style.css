@@ -41,6 +41,7 @@
   transition: 0.8s;
 }
 
+
 .card:hover .circle:before{
   transform: translateX(-500px)rotate(400deg)translateY(-200px);
   background-image: url("../../assets/pokepoke.png");
@@ -104,9 +105,8 @@
   font-size: large;
   font-weight: 600;
   color: #111;
-  display: inline-block;
   text-decoration: none;
-  transform: translate(70px,20px);
+  transform: translate(80px,20px);
   z-index: 5000000000;
 }
 
@@ -224,6 +224,7 @@
 .left{
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 .left .stats{

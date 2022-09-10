@@ -14,7 +14,7 @@
   width: 50px;
   font-weight: 400;
   color: rgb(0, 0, 0);
-  padding: 5px;
+  padding: 3px;
   margin-top: 20px;
   background-color: rgb(247, 208, 44);
   border: none;
@@ -22,6 +22,7 @@
   text-decoration: none;
   cursor: pointer;
   transition: 0.3s;
+  transform: translateX(8px);
 }
 
 .btn:hover{

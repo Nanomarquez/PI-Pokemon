@@ -100,7 +100,7 @@ router.get('/', async (req, res, next) => {
       
       
       if (getAPIDone && pokeAPIList.length > 99) {
-          return res.send(pokeAPIList.concat(pokeDBList));
+          return res.status(200).send(pokeAPIList.concat(pokeDBList));
       } else {
           const pokeAPI = await axios.get(`${URL_POKE}/?offset=0&limit=100`); 
           for (let i = 0; i < pokeAPI.data.results.length; i++) {
@@ -114,7 +114,7 @@ router.get('/', async (req, res, next) => {
               });
           }
           getAPIDone = true;
-          return res.send(pokeAPIList.concat(pokeDBList)); //Concatenar los arrays
+          return res.status(200).send(pokeAPIList.concat(pokeDBList)); //Concatenar los arrays
       }
       // return res.send(pokeAPIList.concat(pokeDBList)); //Concatena los dos arrays
   } catch (error) {
